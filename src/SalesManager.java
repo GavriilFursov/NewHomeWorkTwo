@@ -15,32 +15,32 @@ public class SalesManager {
         return max;
     }
 
-    public int stat() {
-        int sum = 0;
-        int result = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = sum + sales[i];
+    public long stat() {
+        long sum = 0;
+        long result = 0;
+        for (long i = 0; i < sales.length; i++) {
+            sum = sum + sales[(int) i];
             result = (sum - getMax() - getMin()) / sales.length;
 
         }
         return result;
     }
 
-    public int getMax() {
-        int maxValue = sales[0];
-        for (int i = 1; i < sales.length; i++) {
-            if (sales[i] > maxValue) {
-                maxValue = sales[i];
+    public long getMax() {
+        long maxValue = sales[0];
+        for (long i = 1; i < sales.length; i++) {
+            if (sales[(int) i] > maxValue) {
+                maxValue = sales[(int) i];
             }
         }
         return maxValue;
     }
 
-    public int getMin() {
-        int minValue = sales[0];
-        for (int i = 1; i < sales.length; i++) {
-            if (sales[i] < minValue) {
-                minValue = sales[i];
+    public long getMin() {
+        long minValue = sales[0];
+        for (long i = 1; i < sales.length; i++) {
+            if (sales[(int) i] < minValue) {
+                minValue = sales[(int) i];
             }
         }
         return minValue;
